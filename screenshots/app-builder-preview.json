@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "Hyper Strike",
+      "hasCanvas": true,
+      "bodyTextLen": 386,
+      "bodyTextHash": "07a5e4081d57e3a96859688dbd0eaacac6f90271c3101e9afd42982178b9e199",
+      "bodyTextPrefix": "BOT 5 YOU 5 HYPER STRIKE Five HP. Then the paddle breaks. Play v",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "Hyper Strike",
+      "hasCanvas": true,
+      "bodyTextLen": 386,
+      "bodyTextHash": "07a5e4081d57e3a96859688dbd0eaacac6f90271c3101e9afd42982178b9e199",
+      "bodyTextPrefix": "BOT 5 YOU 5 HYPER STRIKE Five HP. Then the paddle breaks. Play v",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-preview.json"
+}

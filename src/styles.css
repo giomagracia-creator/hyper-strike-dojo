@@ -1,0 +1,167 @@
+@import url("https://fonts.bunny.net/css?family=syne:700,800|outfit:500,600,700");
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #07070e;
+  --color-surface: #12141c;
+  --color-fg: #f4f6fb;
+  --color-muted: #9aa3b5;
+  --color-border: #2c3140;
+  --color-cyan: #3ef0ff;
+  --color-magenta: #ff3d7a;
+  --color-amber: #ffc44d;
+  --font-sans: "Outfit", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Syne", "Outfit", ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  html,
+  body {
+    height: 100%;
+    margin: 0;
+    background: var(--color-bg);
+    color: var(--color-fg);
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+}
+
+.heart {
+  width: 1.15rem;
+  height: 1.15rem;
+  flex: none;
+  fill: transparent;
+  stroke: currentColor;
+  stroke-width: 1.75;
+  opacity: 0.32;
+}
+
+.heart[data-on="1"] {
+  fill: currentColor;
+  stroke: none;
+  opacity: 1;
+  filter: drop-shadow(0 0 6px currentColor);
+}
+
+.shield-mark {
+  width: 0.95rem;
+  height: 1.1rem;
+  flex: none;
+  fill: transparent;
+  stroke: var(--color-amber);
+  stroke-width: 1.75;
+  opacity: 0.32;
+}
+
+.shield-mark[data-on="1"] {
+  fill: var(--color-amber);
+  stroke: none;
+  opacity: 1;
+  filter: drop-shadow(0 0 6px var(--color-amber));
+}
+
+.callout {
+  text-shadow: 0 0 22px color-mix(in srgb, currentColor 75%, transparent);
+}
+
+.is-crit {
+  animation: crit 0.55s ease-in-out infinite;
+}
+
+@keyframes crit {
+  50% {
+    opacity: 0.4;
+  }
+}
+
+@keyframes rematch-bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-7px);
+  }
+}
+
+.ghost-arrow {
+  animation: ghost-nudge 0.9s ease-in-out infinite;
+}
+
+@keyframes ghost-nudge {
+  50% {
+    transform: translateX(0);
+    opacity: 0.45;
+  }
+  0% {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .is-crit,
+  .ghost-arrow {
+    animation: none;
+  }
+}
+
+.cn-card {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.cn-wave {
+  position: absolute;
+  z-index: 0;
+  pointer-events: none;
+  border-radius: 999px;
+}
+
+.cn-wave-tr {
+  top: -48px;
+  right: -34px;
+  width: 148px;
+  height: 88px;
+  background: #338fbf;
+}
+
+.cn-wave-tr2 {
+  top: -18px;
+  right: 52px;
+  width: 86px;
+  height: 48px;
+  background: #6eb8d8;
+}
+
+.cn-wave-bl {
+  bottom: -42px;
+  left: -46px;
+  width: 168px;
+  height: 96px;
+  background: #1b6e9a;
+}
+
+.cn-unfold {
+  transform-origin: top center;
+  animation: card-unfold 0.9s cubic-bezier(0.16, 0.84, 0.24, 1) both;
+}
+
+@keyframes card-unfold {
+  0% {
+    transform: perspective(1200px) rotateX(-88deg) scale(0.94);
+  }
+  62% {
+    transform: perspective(1200px) rotateX(7deg) scale(1);
+  }
+  100% {
+    transform: perspective(1200px) rotateX(0deg) scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cn-unfold {
+    animation: none;
+  }
+}
